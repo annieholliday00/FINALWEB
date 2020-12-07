@@ -1,0 +1,66 @@
+#basic
+{
+	background: white;
+	border: solid 1px #9d9d9d
+}
+
+#paragraph
+{
+	font-family: georgia;
+	font-size: 13px;
+	color: #956259;
+	letter-spacing:1.5px;
+}
+
+#header
+{
+	font-family: georgia;
+	font-size: 20px;
+	font-weight: bold;
+	color: #D4BDAE;
+	letter-spacing:1.5px;
+}
+
+#sheader
+{
+	font-family: georgia;
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+	letter-spacing:1.5px;
+}
+
+/* CSS FOR NAVIGATION BAR */
+
+	nav{
+		width:auto;
+	}
+
+	ul{
+		margin:0;
+		padding:0;
+		padding-left:35%;
+	
+		display:flex;
+	}
+
+	body{
+		margin:0;
+	}
+
+	li{
+		list-style-type:none;
+	
+		margin: 0 2vw;
+	}
+
+	a{
+		text-decoration: none;
+	
+		color:#D4BDAE;
+		font-size:3vh;
+	}
+
+	a:hover{
+		background-color: #38193D;
+	}
