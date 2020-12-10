@@ -8,8 +8,17 @@
 {
 	font-family: georgia;
 	font-size: 13px;
-	color: #956259;
+	color: #E2BF9C;
 	letter-spacing:1.5px;
+}
+
+#paragraph2
+{
+	font-family: georgia;
+	font-size: 13px;
+	color: #924D5D;
+	letter-spacing:1.5px;
+	font-style: italic;
 }
 
 #header
