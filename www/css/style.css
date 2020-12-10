@@ -87,3 +87,133 @@ body, html {
 	a:hover{
 		background-color: #38193D;
 	}
+	
+/* here we test the new music function */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+    background: #000000;
+}
+
+#background {
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* container for music player */
+.container {
+    position: absolute;
+    height: 125pt;
+    width: 250pt;
+    top: 405px;
+    left: 910px;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: #000000;
+    box-shadow: 0 0 1px #000000;
+}
+
+/* album cover */
+#thumbnail {
+    position: absolute;
+    width: 103%;
+    transition: 1s;
+    z-index: 3;
+}
+
+/* track artist */
+.song-artist {
+    position: absolute;
+    z-index: 4;
+    color: rgb(249, 168, 76);
+    font-family: 'georgia', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    bottom: 27%;
+    left: 28%;
+}
+
+/* track title */
+.song-title {
+    position: absolute;
+    z-index: 4;
+    color: white;
+    font-family: 'georgia', sans-serif;
+    font-size: 15px;
+    bottom: 18%;
+    left: 28%;
+}
+
+/* style for play and pause images */
+#play-pause {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    filter: invert(1);
+    cursor: pointer;
+    bottom: 15%;
+    z-index: 4;
+    font-size: 53px;
+    left: 9%;
+}
+
+/* style for next and previous song images */
+#next-song, #previous-song {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    filter: invert(1);
+    cursor: pointer;
+    bottom: 13.5%;
+    font-size: 40px;
+    z-index: 4;
+}
+
+/* unique style for next song image */
+#next-song {
+    right: 10%;
+	bottom: 17%;
+}
+
+/* style for the progress bar */
+#progress-bar {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    z-index: 4;
+    height: 5px;
+    background: #000000;
+    width: 190pt;
+    bottom: 5%;
+    border-radius: 30px;
+    left: 10%;
+}
+
+/* style for the progress bar's slider thumb */
+#progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -3px;
+    margin-left: 0px;
+    height: 10px;
+    width: 7px;
+    border: 0;
+    background: -webkit-linear-gradient(45deg,  rgb(249, 168, 76), rgb(249, 102, 76));
+    cursor: pointer;
+}
+
+/* style for the progress bar's runnable track */
+#progress-bar::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    max-height: 5px;
+}
