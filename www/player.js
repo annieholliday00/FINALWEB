@@ -7,11 +7,11 @@ const songTitle = document.querySelector('.song-title'); // element where track 
 const progressBar = document.querySelector('#progress-bar'); // element where progress bar appears
 let pPause = document.querySelector('#play-pause'); // element where play and pause image appears
 
-songIndex = 3;
-songs = ['./assets/music/glass.mp3', './assets/music/molchat.mp3', './assets/music/lime.mp3']; // object storing paths for audio objects
-thumbnails = ['./assets/images/lemonade.png', './assets/images/dontstartnow.png', './assets/images/scare.jpg']; // object storing paths for album covers and backgrounds
-songArtists = ['glass animals', 'molchat doma', 'lime cordiale']; // object storing track artists
-songTitles = ["deja vu (stripped)", "kletka", 'robbery']; // object storing track titles
+songIndex = 4;
+songs = ['./assets/music/glass.mp3', './assets/music/molchat.mp3', './assets/music/lime.mp3', './assets/music/everything.mp3']; // object storing paths for audio objects
+thumbnails = ['./assets/images/glass.png', './assets/images/molchat.png', './assets/images/lime.png', './assets/images/everything.png']; // object storing paths for album covers and backgrounds
+songArtists = ['glass animals', 'molchat doma', 'lime cordiale', 'everything everything']; // object storing track artists
+songTitles = ["deja vu (stripped)", "kletka", 'robbery', 'cough cough']; // object storing track titles
 
 // function where pp (play-pause) element changes based on playing boolean value - if play button clicked, change pp.src to pause button and call song.play() and vice versa.
 let playing = true;
@@ -60,6 +60,23 @@ function nextSong() {
 function nextSong() {
     songIndex++;
     if (songIndex > 2) {
+        songIndex = 0;
+    };
+    song.src = songs[songIndex];
+    thumbnail.src = thumbnails[songIndex];
+    background.src = thumbnails[songIndex];
+
+    songArtist.innerHTML = songArtists[songIndex];
+    songTitle.innerHTML = songTitles[songIndex];
+
+    playing = true;
+    playPause();
+}
+
+// function where songIndex is incremented, song/thumbnail image/background image/song artist/song title changes to next index value, and playPause() runs to play next track 
+function nextSong() {
+    songIndex++;
+    if (songIndex > 3) {
         songIndex = 0;
     };
     song.src = songs[songIndex];

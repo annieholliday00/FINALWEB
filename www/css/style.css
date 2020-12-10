@@ -137,8 +137,8 @@ body {
     color: rgb(249, 168, 76);
     font-family: 'georgia', sans-serif;
     font-weight: bold;
-    font-size: 15px;
-    bottom: 27%;
+    font-size: 12px;
+    bottom: 30%;
     left: 28%;
 }
 
@@ -148,19 +148,18 @@ body {
     z-index: 4;
     color: white;
     font-family: 'georgia', sans-serif;
-    font-size: 15px;
-    bottom: 18%;
+    font-size: 12px;
+    bottom: 20%;
     left: 28%;
 }
 
 /* style for play and pause images */
 #play-pause {
     position: absolute;
-    height: 50px;
-    width: 50px;
-    filter: invert(1);
+    height: 40px;
+    width: 40px;
     cursor: pointer;
-    bottom: 15%;
+    bottom: 17%;
     z-index: 4;
     font-size: 53px;
     left: 9%;
@@ -181,7 +180,7 @@ body {
 /* unique style for next song image */
 #next-song {
     right: 10%;
-	bottom: 17%;
+	bottom: 20%;
 }
 
 /* style for the progress bar */
