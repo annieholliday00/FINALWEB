@@ -1,43 +1,48 @@
-const background = document.querySelector('#background'); // background derived from album cover below
-const thumbnail = document.querySelector('#thumbnail'); // album cover 
-const song = document.querySelector('#song'); // audio object
+/* below uses stuff from index in the java */
 
-const songArtist = document.querySelector('.song-artist'); // element where track artist appears
-const songTitle = document.querySelector('.song-title'); // element where track title appears
-const progressBar = document.querySelector('#progress-bar'); // element where progress bar appears
-let pPause = document.querySelector('#play-pause'); // element where play and pause image appears
+	const background = document.querySelector('#background'); 
+	const thumbnail = document.querySelector('#thumbnail'); 
+	const song = document.querySelector('#song'); 
 
-songIndex = 4;
-songs = ['./assets/music/glass.mp3', './assets/music/molchat.mp3', './assets/music/lime.mp3', './assets/music/everything.mp3']; // object storing paths for audio objects
-thumbnails = ['./assets/images/glass.png', './assets/images/molchat.png', './assets/images/lime.png', './assets/images/everything.png']; // object storing paths for album covers and backgrounds
+	const songArtist = document.querySelector('.song-artist'); 
+	const songTitle = document.querySelector('.song-title');
+	const progressBar = document.querySelector('#progress-bar'); 
+	let pPause = document.querySelector('#play-pause'); 
+
+/* if you want to add new songs then remember to increase the index and add a new increment thingy */
+
+songIndex = 4; /*REMEMBER TO CHANGE THIS*/
+songs = ['assets/music/glass.mp3', 'assets/music/molchat.mp3', 'assets/music/lime.mp3', 'assets/music/everything.mp3']; // object storing paths for audio objects
+thumbnails = ['assets/images/glass.png', 'assets/images/molchat.png', 'assets/images/lime.png', 'assets/images/everything.png']; // object storing paths for album covers and backgrounds
 songArtists = ['glass animals', 'molchat doma', 'lime cordiale', 'everything everything']; // object storing track artists
 songTitles = ["deja vu (stripped)", "kletka", 'robbery', 'cough cough']; // object storing track titles
 
-// function where pp (play-pause) element changes based on playing boolean value - if play button clicked, change pp.src to pause button and call song.play() and vice versa.
-let playing = true;
-function playPause() {
-    if (playing) {
-        const song = document.querySelector('#song'),
-        thumbnail = document.querySelector('#thumbnail');
+/* pause and play shenanigans below */
 
-        pPause.src = "./assets/icons/pause.png"
-        thumbnail.style.transform = "scale(1.15)";
+	let playing = true;
+	function playPause() {
+		if (playing) {
+			const song = document.querySelector('#song'),
+			thumbnail = document.querySelector('#thumbnail');
+	
+			pPause.src = "assets/icons/play.png"
+			thumbnail.style.transform = "scale(1.15)";
         
-        song.play();
-        playing = false;
-    } else {
-        pPause.src = "./assets/icons/play.png"
-        thumbnail.style.transform = "scale(1)"
-        
-        song.pause();
-        playing = true;
-    }
-}
+			song.play();
+			playing = false;
+		} else {
+			pPause.src = "assets/icons/play.png"
+			thumbnail.style.transform = "scale(1)"
+			
+			song.pause();
+			playing = true;
+		}
+	}
 
-// automatically play the next song at the end of the audio object's duration
-song.addEventListener('ended', function(){
-    nextSong();
-});
+/* play the next song when done */
+	song.addEventListener('ended', function(){
+		nextSong();
+	});
 
 // function where songIndex is incremented, song/thumbnail image/background image/song artist/song title changes to next index value, and playPause() runs to play next track 
 function nextSong() {
