@@ -1,0 +1,11 @@
+note to self about local server
+
+if you want the 3d models to work properly then do this:
+
+in command:
+	cd finalweb
+	cd www
+	python3.6 -m http.server 200[whatever number this happens to be]
+	
+then visit:
+	http://localhost:200[whatever number matches]/index.html
