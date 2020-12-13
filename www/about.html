@@ -9,6 +9,14 @@
  
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
  
+ 		<script>
+			function show()
+				{
+				var div = document.getElementById("player");
+				div.style.display = "block";
+				}
+		</script>
+ 
 	</head>
 	<body>
  
@@ -41,26 +49,29 @@
 				
 welcome
 <br><br>
-this is a pretentious little website made to exhibit my art and 3d models, which i've also filled with random quotes and weird design choices to spice things up a little.
+this is a little website made to exhibit my art and 3d models, which i've also filled with random quotes and weird design choices to spice things up a little.
 <br><br>
-the first background is a sketch by tim sale, an artist who's worked on comics like 'long halloween' and 'dark victory'. i particularly love his scarecrow design, which is why i decided to toss him on the front page! the second background is from the 'zaba' album for glass animals, created by Micah Lidberg. It was only fitting to put Glass animals as my first musical artist on my javascript player thingy. 
+the first background is a sketch by tim sale, an artist who's worked on comics like 'long halloween' and 'dark victory'. i particularly love his scarecrow design, which is why i decided to toss him on the front page! the second background is from the 'zaba' album for glass animals, created by Micah Lidberg. It was only fitting to put Glass animals as my first musical artist on my javascript player thingy, which was the hardest thing to implement on here, other than the 3d model previewer. 
 <br><br>
-contrary to my spectacular website design, i dont have much experience with css or javascript. i did used to do html layouts back in 2012/2013, which is definitely my strong suit, but i even struggled to keep up with that and make this work effectively. 
+if you want to use the music player, you MIGHT want to turn your volume down a bit first. I have four songs on there at the moment but I couldn't figure out how to work backwards through the list, so it's basically just a roundabout. ALSO the songs repeat themselves when they're done, and you might want to click twice on the skip button for the first time because it doesn't like to listen to you.
+<br><br>
+<a onclick="show()" href="#">MUSIC</a>
 
 <!-- javascript attempt below -->
 
-<img src="./assets/images/glass.png" id="background" />
-    <audio src="./assets/music/glass.mp3" id="song"></audio>
+<div id="player" style="display:none;">
+<img src="assets/images/glass.png" id="background" />
+    <audio src="assets/music/glass.mp3" id="song"></audio>
 
     <div class="container">  
         <div class="box"></div>      
-        <img src="./assets/images/glass.png" id="thumbnail" />
+        <img src="assets/images/glass.png" id="thumbnail" />
         
-        <img src="./assets/icons/play.png" onclick="playPause()" id="play-pause" />
-        <img src="./assets/icons/forward.png" onclick="nextSong()" id="next-song" />
+        <img src="assets/icons/play.png" onclick="playPause()" id="play-pause" />
+        <img src="assets/icons/forward.png" onclick="nextSong()" id="next-song" />
 
         <div class="song-artist">glass animals</div>
-        <div class="song-title">deja vu (stripped)</div>
+        <div class="song-title">black mambo</div>
 
         <!-- Input element for progress bar - min=0 starting value of every song - max length will change per song so leave empty -->
         
@@ -78,6 +89,7 @@ contrary to my spectacular website design, i dont have much experience with css 
     </div>
 
     <script src="player.js"></script>
+</div>
 
 <!-- javascript attempt above -->
 </div>

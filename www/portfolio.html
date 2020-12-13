@@ -44,9 +44,11 @@
 
 <!-- stuff below -->
 
-				<div id="paragraph">
-hello this is the portfolio section
-				</div>
+<div style="height:30px;padding:10px;margin:20px;margin-bottom:0px;width:95%">
+<div id="header">
+<div style="height:auto;width:auto;float:left;margin-right:85%;">ABOUT</div>
+<div style="height:auto;width:auto;float:left;"><a onclick="show()" href="#">MUSIC</a></div>
+</div></div>
 
 	<!-- portfolio exhibition for models -->
 
@@ -164,6 +166,40 @@ hello this is the portfolio section
 							</div></div></div>
 
 				</div></div></div>
+				
+<!-- javascript attempt below -->
+
+<div id="player" style="display:none;">
+<img src="assets/images/glass.png" id="background"></img>
+    <audio src="assets/music/glass.mp3" id="song"></audio>
+
+    <div class="container">  
+        <div class="box"></div>      
+        <img src="assets/images/glass.png" id="thumbnail"></img>
+        
+        <img src="assets/icons/play.png" onclick="playPause()" id="play-pause" />
+        <img src="assets/icons/forward.png" onclick="nextSong()" id="next-song" />
+		<div style="background:white;height:13px;width:10px;" onclick="shutdown()" id="close">
+		<div id="paragraphplain">X</div></div>
+		 
+        <div class="song-artist">glass animals</div>
+        <div class="song-title">black mambo</div>
+        
+        <input 
+            type="range" 
+            id="progress-bar" 
+            min="0" 
+            max="" 
+            value="0" 
+            onchange="changeProgressBar()"
+        />
+
+        <div class="currentTime"></div>
+        <div class="durationTime"></div>
+    </div>
+
+    <script src="player.js"></script>
+</div>
 
 <!-- stuff above -->
 			</div>

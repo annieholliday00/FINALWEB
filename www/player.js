@@ -11,11 +11,11 @@
 
 /* if you want to add new songs then remember to increase the index and add a new increment thingy */
 
-songIndex = 4; /*REMEMBER TO CHANGE THIS*/
-songs = ['assets/music/glass.mp3', 'assets/music/molchat.mp3', 'assets/music/lime.mp3', 'assets/music/everything.mp3']; // object storing paths for audio objects
-thumbnails = ['assets/images/glass.png', 'assets/images/molchat.png', 'assets/images/lime.png', 'assets/images/everything.png']; // object storing paths for album covers and backgrounds
-songArtists = ['glass animals', 'molchat doma', 'lime cordiale', 'everything everything']; // object storing track artists
-songTitles = ["deja vu (stripped)", "kletka", 'robbery', 'cough cough']; // object storing track titles
+songIndex = 6; /*REMEMBER TO CHANGE THIS*/
+songs = ['assets/music/gorillaz.mp3', 'assets/music/molchat.mp3', 'assets/music/lime.mp3', 'assets/music/everything.mp3', 'assets/music/stauber.mp3', 'assets/music/glass.mp3']; // object storing paths for audio
+thumbnails = ['assets/images/gorillaz.png', 'assets/images/molchat.png', 'assets/images/lime.png', 'assets/images/everything.png', 'assets/images/stauber.png', 'assets/images/glass.png']; // object storing paths for album covers
+songArtists = ['gorillaz', 'molchat doma', 'lime cordiale', 'everything everything', 'jack stauber', 'glass animals']; // object storing track artists
+songTitles = ["desole", "toska", 'robbery', 'schoolin', 'tea errors', 'black mambo']; // object storing track titles
 
 /* pause and play shenanigans below */
 
@@ -38,14 +38,29 @@ songTitles = ["deja vu (stripped)", "kletka", 'robbery', 'cough cough']; // obje
 			playing = true;
 		}
 	}
+	
+//* my attempt to make an open button *//
+function show()
+{
+	var div = document.getElementById("player");
+	div.style.display = "block";
+	}
 
-/* play the next song when done */
+//* my attempt to make a close button, hopefully this works *//
+function shutdown() 
+{
+	var div = document.getElementById("player");
+	div.style.display = "none";
+	}
+
+//* play the next song when done *//
 	song.addEventListener('ended', function(){
 		nextSong();
 	});
 
-// function where songIndex is incremented, song/thumbnail image/background image/song artist/song title changes to next index value, and playPause() runs to play next track 
-function nextSong() {
+//* function where songIndex is incremented, song/thumbnail image/background image/song artist/song title changes to next index value, and playPause() runs to play next track *//
+function nextSong() 
+{
     songIndex++;
     if (songIndex > 1) {
         songIndex = 0;
@@ -61,8 +76,9 @@ function nextSong() {
     playPause();
 }
 
-// function where songIndex is incremented, song/thumbnail image/background image/song artist/song title changes to next index value, and playPause() runs to play next track 
-function nextSong() {
+//* function to play next track *// 
+function nextSong() 
+{
     songIndex++;
     if (songIndex > 2) {
         songIndex = 0;
@@ -78,8 +94,9 @@ function nextSong() {
     playPause();
 }
 
-// function where songIndex is incremented, song/thumbnail image/background image/song artist/song title changes to next index value, and playPause() runs to play next track 
-function nextSong() {
+//* function to play next track again *//
+function nextSong() 
+{
     songIndex++;
     if (songIndex > 3) {
         songIndex = 0;
@@ -95,8 +112,45 @@ function nextSong() {
     playPause();
 }
 
-// update progressBar.max to song object's duration, same for progressBar.value, update currentTime/duration DOM
-function updateProgressValue() {
+//* function to play next track again *//
+function nextSong() 
+{
+    songIndex++;
+    if (songIndex > 4) {
+        songIndex = 0;
+    };
+    song.src = songs[songIndex];
+    thumbnail.src = thumbnails[songIndex];
+    background.src = thumbnails[songIndex];
+
+    songArtist.innerHTML = songArtists[songIndex];
+    songTitle.innerHTML = songTitles[songIndex];
+
+    playing = true;
+    playPause();
+}
+
+//* function to play next track again *//
+function nextSong() 
+{
+    songIndex++;
+    if (songIndex > 5) {
+        songIndex = 0;
+    };
+    song.src = songs[songIndex];
+    thumbnail.src = thumbnails[songIndex];
+    background.src = thumbnails[songIndex];
+
+    songArtist.innerHTML = songArtists[songIndex];
+    songTitle.innerHTML = songTitles[songIndex];
+
+    playing = true;
+    playPause();
+}
+
+//* changes the progress time *//
+function updateProgressValue() 
+{
     progressBar.max = song.duration;
     progressBar.value = song.currentTime;
     document.querySelector('.currentTime').innerHTML = (formatTime(Math.floor(song.currentTime)));
@@ -107,20 +161,10 @@ function updateProgressValue() {
     }
 };
 
-// convert song.currentTime and song.duration into MM:SS format
-function formatTime(seconds) {
-    let min = Math.floor((seconds / 60));
-    let sec = Math.floor(seconds - (min * 60));
-    if (sec < 10){ 
-        sec  = `0${sec}`;
-    };
-    return `${min}:${sec}`;
-};
-
-// run updateProgressValue function every 1/2 second to show change in progressBar and song.currentTime on the DOM
+//* shows progress *//
 setInterval(updateProgressValue, 500);
 
-// function where progressBar.value is changed when slider thumb is dragged without auto-playing audio
+//* changes the place in the song *//
 function changeProgressBar() {
     song.currentTime = progressBar.value;
 };

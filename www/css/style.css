@@ -35,11 +35,18 @@ body, html {
 	font-style: italic;
 }
 
+#paragraphplain
+{
+		font-family:georgia;
+		font-size:13px;
+		color: black;
+		font-style:bold;
+}
+
 #header
 {
 	font-family: georgia;
 	font-size: 20px;
-	font-weight: bold;
 	color: #D4BDAE;
 	letter-spacing:1.5px;
 }
@@ -92,7 +99,8 @@ body, html {
 /* new music function */
 
 /* position absolute makes sure its totally separate from the code in the boxes! */
-#background {
+#background 
+{
     position: absolute;
     height: 90%;
     width: 100%;
@@ -104,7 +112,8 @@ body, html {
 }
 
 /* container for player */
-.container {
+.container 
+{
     position: absolute;
     height: 170px;
     width: 335px;
@@ -115,14 +124,16 @@ body, html {
     overflow: hidden;
 }
 
-#thumbnail {
+#thumbnail
+{
     position: absolute;
     width: 103%;
     transition: 1s;
     z-index: 3;
 }
 
-.song-artist {
+.song-artist 
+{
     position: absolute;
     z-index: 4;
     color: #FFAD32;
@@ -133,7 +144,8 @@ body, html {
     left: 28%;
 }
 
-.song-title {
+.song-title 
+{
     position: absolute;
     z-index: 4;
     color: white;
@@ -143,7 +155,20 @@ body, html {
     left: 28%;
 }
 
-#play-pause {
+#close 
+{
+	position:absolute;
+	height:40px;
+	width:40px;
+	cursor: pointer;
+	bottom:90%;
+	z-index:4;
+	font-size:50px;
+	left:95%;
+}
+
+#play-pause 
+{
     position: absolute;
     height: 40px;
     width: 40px;
@@ -155,7 +180,8 @@ body, html {
 }
 
 /* style for next and previous song images */
-#next-song, #previous-song {
+#next-song, #previous-song 
+{
     position: absolute;
     height: 30px;
     width: 30px;
@@ -167,13 +193,15 @@ body, html {
 }
 
 /* unique style for next song image */
-#next-song {
+#next-song 
+{
     right: 10%;
 	bottom: 20%;
 }
 
 /* style for the progress bar */
-#progress-bar {
+#progress-bar 
+{
     -webkit-appearance: none;
     appearance: none;
     position: absolute;
@@ -187,7 +215,8 @@ body, html {
 }
 
 /* style for the progress bar's slider thumb */
-#progress-bar::-webkit-slider-thumb {
+#progress-bar::-webkit-slider-thumb 
+{
     -webkit-appearance: none;
     margin-top: -3px;
     margin-left: 0px;
@@ -199,7 +228,8 @@ body, html {
 }
 
 /* style for the progress bar's runnable track */
-#progress-bar::-webkit-slider-runnable-track {
+#progress-bar::-webkit-slider-runnable-track 
+{
     -webkit-appearance: none;
     appearance: none;
     cursor: pointer;
