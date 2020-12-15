@@ -69,7 +69,7 @@ body, html {
 	ul{
 		margin:0;
 		padding:0;
-		padding-left:35%;
+		padding-left:29%;
 	
 		display:flex;
 		/*we have to use flex because otherwise it stays in a list format */
@@ -82,7 +82,7 @@ body, html {
 	li{
 		list-style-type:none;
 	
-		margin-right: 75px;
+		margin-right: 9%;
 	}
 
 	a{
@@ -117,8 +117,8 @@ body, html {
     position: absolute;
     height: 170px;
     width: 335px;
-    top: 405px;
-    left: 910px;
+    top: 70%;
+    left: 73%;
     right: 0;
     bottom: 0;
     overflow: hidden;

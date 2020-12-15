@@ -31,6 +31,7 @@
 		<div style="background:black;height:5%;width:97%;color:white;float:left;padding:15px;">
 				<nav>
 					<ul>
+						<li><a href="index.html">HOME</a></li>
 						<li><a href="about.html">ABOUT</a></li>
 						<li><a href="portfolio.html">PORTFOLIO</a></li>
 						<li><a href="contact.html">CONTACT</a></li>
@@ -40,13 +41,19 @@
 			
 <!-- zaba container for paragraphs -->
 
-		<div style="background-image:url(images/zaba.jpg);height:490px;width:99%;float:left;margin:1px">
+		<div style="background-image:url(images/zaba.jpg);height:100%;width:99%;float:left;margin:1px">
 		
-			<div style="background-color:rgba(15, 0, 29, 0.74);height:430px;width:95%;margin:2.5%;overflow:hidden">
-			<div style="height:430px;width:101.5%;overflow:auto;">
+			<div style="background-color:rgba(15, 0, 29, 0.74);height:80%;width:95%;margin:2.5%;overflow:hidden">
+			<div style="height:100%;width:103%;overflow:auto;">
 				
+<div style="height:5%;padding:1%;margin:1.5%;margin-bottom:0px;width:95%">
+<div id="header">
+<div style="height:auto;width:5%;float:left;margin-right:84%;">ABOUT</div>
+<div style="height:auto;width:5%;float:left;"><a onclick="show()" href="#">MUSIC</a></div>
+</div></div>	
+
 				<div id="paragraph">
-				
+
 welcome
 <br><br>
 this is a little website made to exhibit my art and 3d models, which i've also filled with random quotes and weird design choices to spice things up a little.
@@ -55,7 +62,6 @@ the first background is a sketch by tim sale, an artist who's worked on comics l
 <br><br>
 if you want to use the music player, you MIGHT want to turn your volume down a bit first. I have four songs on there at the moment but I couldn't figure out how to work backwards through the list, so it's basically just a roundabout. ALSO the songs repeat themselves when they're done, and you might want to click twice on the skip button for the first time because it doesn't like to listen to you.
 <br><br>
-<a onclick="show()" href="#">MUSIC</a>
 
 <!-- javascript attempt below -->
 
@@ -69,6 +75,8 @@ if you want to use the music player, you MIGHT want to turn your volume down a b
         
         <img src="assets/icons/play.png" onclick="playPause()" id="play-pause" />
         <img src="assets/icons/forward.png" onclick="nextSong()" id="next-song" />
+		<div style="background:white;height:13px;width:10px;" onclick="shutdown()" id="close">
+		<div id="paragraphplain">X</div></div>
 
         <div class="song-artist">glass animals</div>
         <div class="song-title">black mambo</div>
