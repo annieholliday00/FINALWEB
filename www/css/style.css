@@ -21,9 +21,9 @@ body, html {
 #paragraph
 {
 	font-family: georgia;
-	font-size: 13px;
+	font-size: 12px;
 	color: #E2BF9C;
-	letter-spacing:1.5px;
+	letter-spacing:1.5pt;
 }
 
 #paragraph2
@@ -58,6 +58,17 @@ body, html {
 	font-weight: bold;
 	color: black;
 	letter-spacing:1.5px;
+}
+
+#footer
+{
+	position:fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: black;
+	color: white;
+	text-align: center;
 }
 
 /* CSS FOR NAVIGATION BAR */

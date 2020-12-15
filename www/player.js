@@ -14,7 +14,7 @@
 songIndex = 6; /*REMEMBER TO CHANGE THIS*/
 songs = ['assets/music/gorillaz.mp3', 'assets/music/molchat.mp3', 'assets/music/lime.mp3', 'assets/music/everything.mp3', 'assets/music/stauber.mp3', 'assets/music/glass.mp3']; // object storing paths for audio
 thumbnails = ['assets/images/gorillaz.png', 'assets/images/molchat.png', 'assets/images/lime.png', 'assets/images/everything.png', 'assets/images/stauber.png', 'assets/images/glass.png']; // object storing paths for album covers
-songArtists = ['gorillaz', 'molchat doma', 'lime cordiale', 'everything everything', 'jack stauber', 'glass animals']; // object storing track artists
+songArtists = ['gorillaz (feat fatoum..', 'molchat doma', 'lime cordiale', 'everything everything', 'jack stauber', 'glass animals']; // object storing track artists
 songTitles = ["desole", "toska", 'robbery', 'schoolin', 'tea errors', 'black mambo']; // object storing track titles
 
 /* pause and play shenanigans below */
