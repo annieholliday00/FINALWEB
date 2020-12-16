@@ -19,7 +19,7 @@ songTitles = ["desole", "toska", 'robbery', 'schoolin', 'tea errors', 'black mam
 
 /* pause and play shenanigans below */
 
-	let playing = true;
+let playing = true;
 	function playPause() {
 		if (playing) {
 			const song = document.querySelector('#song'),
