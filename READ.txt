@@ -9,3 +9,13 @@ in command:
 	
 then visit:
 	http://localhost:200[whatever number matches]/index.html
+
+---
+
+UPDATED
+
+VISIT:
+
+https://annieholliday00.github.io/FINALWEB/www/index.html
+
+GIT IS NOW HOSTING THE SERVER
